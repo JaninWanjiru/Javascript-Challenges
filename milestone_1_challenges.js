@@ -110,4 +110,30 @@ console.log(greetUser("Kelly", 7));
 console.log(greetUser("Benson", 15));
 console.log(greetUser("Hope", 20));
 console.log(greetUser("Kabi", 23));
-  
+
+
+// Challenge 9: FizzBuzz
+// Write a function called fizzBuzzCheck(number) that takes a number and returns:
+// "Fizz" if the number is divisible by 3
+// "Buzz" if the number is divisible by 5
+// "FizzBuzz" if it’s divisible by both 3 and 5
+// If it’s divisible by neither, return the number itself as a string
+function fizzBuzzCheck(number) {
+  if (number % 3 == 0 && number % 5 == 0) {
+    return "FizzBuzz";
+  } else if (number % 3 == 0) {
+    return "Fizz";
+  } else if (number % 5== 0) {
+    return "Buzz";
+  } else {
+    return number;
+  }
+}
+console.log(fizzBuzzCheck(9));
+console.log(fizzBuzzCheck(10));
+console.log(fizzBuzzCheck(30));
+console.log(fizzBuzzCheck(7));
+
+
+
+
