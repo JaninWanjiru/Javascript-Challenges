@@ -55,5 +55,18 @@ canDrive("Becky", 22);
 canDrive("Jack", 15);
 
 
+// Challenge 6: Largest Number
+// Write a function called findLargest(a, b, c) that takes three numbers and returns the largest of the three
+function findLargest(a, b, c) {
+  if (a > b && a > c ) {
+    return a;
+  } else if (b > a && b > c) {
+    return b;
+  } else {
+    return c;
+  }
+}
 
+console.log(findLargest(10, 20, 30));
+console.log(findLargest(70, 90, 50));
 
