@@ -135,5 +135,19 @@ console.log(fizzBuzzCheck(30));
 console.log(fizzBuzzCheck(7));
 
 
+// Challenge 10: Perimeter 2
+// Write a function that takes a number and returns the perimeter of either a circle or a square. The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, and the number will be the side of the square or the radius of the circle
+function perimeter2(letter, num) {
+  if (letter === "s") {
+    return num * 4;
+  } else if (letter === "c") {
+    return num * 6.28;
+  } else {
+    return "Wrong input!";
+  }
+}
+console.log(perimeter2("s", 10));
+console.log(perimeter2("c", 2));
+
 
 
