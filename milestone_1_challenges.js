@@ -87,3 +87,27 @@ function calculateBMI(weight, height) {
 }
 console.log(`Your BMI is - ${calculateBMI(48.50, 1.5)}`);
 console.log(`Your BMI is -  ${calculateBMI(58, 1.5)}`);
+
+
+// Challenge 8: Greeting based on time
+// Write a function called greetUser(name, hour) that returns a personalized greeting based on the hour of the day.
+
+function greetUser(name, hour) {
+  if (hour >= 5 && hour <= 11) {
+    return `Good morning, ${name}!`;
+  } else if (hour >= 12 && hour <= 17) {
+    return `Good afternoon, ${name}!`;
+  } else if (hour >= 18 && hour <= 21) {
+    return `Good evening, ${name}!`;
+  } else if (hour >= 22 && hour <= 24) {
+    return `Good night, ${name}!`;
+  } else {
+    return `hour not valid!`;
+  }
+}
+
+console.log(greetUser("Kelly", 7));
+console.log(greetUser("Benson", 15));
+console.log(greetUser("Hope", 20));
+console.log(greetUser("Kabi", 23));
+  
