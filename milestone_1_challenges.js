@@ -193,3 +193,19 @@ function factorial(n) {
 console.log(factorial(4));
 console.log(factorial(2));
 console.log(factorial(0));
+
+
+// Challenge 14: Multiple Sum
+// Write a function called sumMultiples(n, divisor) that returns the sum of all numbers from 1 up to n that are divisible by divisor.
+function sumMutiples(n, divisor) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % divisor == 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+console.log(sumMutiples(15, 10));
+console.log(sumMutiples(7, 5));
