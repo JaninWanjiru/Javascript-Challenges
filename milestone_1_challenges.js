@@ -177,3 +177,19 @@ function powerUp(num, times) {
 console.log(powerUp(8, 0));
 console.log(powerUp(4, 9));
 
+
+// Challenge 13: Factorial Calculator
+// Write a function called factorial(n) that takes a non-negative integer n and returns the factorial of n — that’s the product of all positive integers from 1 up to n. By definition, factorial of 0 is 1.
+function factorial(n) {
+  if (n < 0) {
+    return "Invalid input";
+  }
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+console.log(factorial(4));
+console.log(factorial(2));
+console.log(factorial(0));
