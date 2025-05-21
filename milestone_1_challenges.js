@@ -190,6 +190,7 @@ function factorial(n) {
   }
   return result;
 }
+
 console.log(factorial(4));
 console.log(factorial(2));
 console.log(factorial(0));
@@ -209,3 +210,18 @@ function sumMutiples(n, divisor) {
 
 console.log(sumMutiples(15, 10));
 console.log(sumMutiples(7, 5));
+
+
+// Challenge 15: Sum of Digits
+// Write a function called sumDigits(num) that takes a positive integer and returns the sum of its digits.
+function sumDigits(num) {
+    let sum = 0;
+    while(num > 0) {
+        sum = sum + (num % 10);
+        num = Math.floor(num / 10);
+    }
+    return sum;
+}
+
+console.log(sumDigits(450));
+console.log(sumDigits(202));
