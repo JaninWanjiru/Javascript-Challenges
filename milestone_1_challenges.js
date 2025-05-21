@@ -27,7 +27,29 @@ function findPerimeter(length, width) {
 console.log(findPerimeter(15, 30));
 
 
+// Challenge 4: Check Negative
+// Write a function called isNegative that takes a number as it's only argument, the function should return true if the passed number is a negative number and false if the passed number is not a negative number.
+function isNegative(number) {
+    if (number < 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isNegative(25));
+console.log(isNegative(-5));
 
 
+// Challenge 5: Can I drive
+// Write a function that takes in a person's name and age. If they're 18 or older, return a message like 'Alice is old enough to drive.' If they're younger, return 'Bob is not old enough to drive yet.'
+// function canDrive(name, age) {
+//   if (age >= 18) {
+//     console.log(`${name} is old enough to drive`);
+//   } else {
+//     console.log(`${name} is not old enough to drive yet`);
+//   }
+// }
 
+// canDrive
 
