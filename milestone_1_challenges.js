@@ -150,4 +150,21 @@ console.log(perimeter2("s", 10));
 console.log(perimeter2("c", 2));
 
 
+// Challenge 11: Sum of Even Numbers
+// Write a function called sumEvenNumbers(n) that takes a number n and returns the sum of all even numbers from 1 up to and including n.
+function sumEvenNumbers(n) {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    if (i % 2 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+console.log(sumEvenNumbers(10));
+console.log(sumEvenNumbers(20));
+console.log(sumEvenNumbers(25));
+
+
 
