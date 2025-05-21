@@ -167,4 +167,13 @@ console.log(sumEvenNumbers(20));
 console.log(sumEvenNumbers(25));
 
 
+// Challenge 12: Multiply by Itself
+// Write a function called powerUp(num, times) that takes two numbers and returns the result of multiplying num by itself times times using only a loop and arithmetic operators (no Math.pow() allowed).
+function powerUp(num, times) {
+  let power = num ** times;
+  return power;
+}
+
+console.log(powerUp(8, 0));
+console.log(powerUp(4, 9));
 
