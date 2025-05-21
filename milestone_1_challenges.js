@@ -43,13 +43,17 @@ console.log(isNegative(-5));
 
 // Challenge 5: Can I drive
 // Write a function that takes in a person's name and age. If they're 18 or older, return a message like 'Alice is old enough to drive.' If they're younger, return 'Bob is not old enough to drive yet.'
-// function canDrive(name, age) {
-//   if (age >= 18) {
-//     console.log(`${name} is old enough to drive`);
-//   } else {
-//     console.log(`${name} is not old enough to drive yet`);
-//   }
-// }
+function canDrive(name, age) {
+   if (age >= 18) {
+     console.log(`${name} is old enough to drive`);
+   } else {
+     console.log(`${name} is not old enough to drive yet`);
+   }
+ }
 
-// canDrive
+canDrive("Becky", 22);
+canDrive("Jack", 15);
+
+
+
 
