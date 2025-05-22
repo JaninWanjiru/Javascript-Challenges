@@ -67,4 +67,24 @@ function countProperties(object) {
   return count
 }
 const objectExample = { name: "Alice", age: 25, city: "Paris" };
-console.log(countProperties(objectExample))
+
+console.log(countProperties(objectExample));
+
+
+// Challenge 6:Filter by Length
+function filterByLength(strings, minLength) {
+  const newArray = [];
+
+  for (let i = 0; i < strings.length; i++) {
+    if (strings[i].length >= minLength) {
+      newArray.push(strings[i]);
+    }
+  }
+
+  return newArray;
+}
+const string = ["tree", "house", "cat", "mountain", "sun"];
+
+console.log(filterByLength(string, 4));
+
+
