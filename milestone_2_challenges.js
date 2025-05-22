@@ -100,3 +100,21 @@ function sumEvenNumbers(myArray) {
 
 console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6]));
 
+
+// Challenge 8: Difference Between Sum of Even and Odd Numbers
+function differenceEvenOdd(numbers) {
+  let evenSum = 0;
+  let oddSum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      evenSum += numbers[i];
+    } else {
+      oddSum += numbers[i];
+    }
+  }
+
+  return evenSum - oddSum;
+}
+
+console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6]));
