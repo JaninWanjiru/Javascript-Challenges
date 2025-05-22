@@ -80,11 +80,23 @@ function filterByLength(strings, minLength) {
       newArray.push(strings[i]);
     }
   }
-
   return newArray;
 }
 const string = ["tree", "house", "cat", "mountain", "sun"];
 
 console.log(filterByLength(string, 4));
 
+
+// Challenge 7: Sum of Even Numbers
+function sumEvenNumbers(myArray) {
+  let sumOfValues = 0;
+  for(let i = 0; i < myArray.length; i++){
+    if (myArray[i] % 2 === 0){
+      sumOfValues = sumOfValues + myArray[i];
+    }
+  }
+  return sumOfValues;
+}
+
+console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6]));
 
