@@ -220,3 +220,27 @@ function removeDuplicates(array) {
   return Object.values(newArray);
 }
 console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]))
+
+
+// Challenge 16: Most Frequent
+function mostFrequent(array) {
+  let occurrences = {};
+    let count = 0;
+    let mostAppearance;
+
+    for (let i = 0; i < array.length; i++) {
+        if (occurrences[array[i]]) {
+            occurrences[array[i]]++;
+        } else {
+            occurrences[array[i]] = 1;
+        }
+
+        if (occurrences[array[i]] > count) {
+            count = occurrences[array[i]];
+            mostAppearance = array[i];
+        }
+    }
+    return mostAppearance;
+}
+console.log(mostFrequent([1, 2, 2, 3, 3, 3, 4]))
+console.log(mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]))
