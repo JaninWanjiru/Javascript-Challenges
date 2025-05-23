@@ -209,3 +209,14 @@ function countOccurences(strings) {
     return object;
 }
 console.log(countOccurences(["apple", "banana", "apple", "orange", "banana", "apple"]))
+
+
+// Challenge 15: Remove Duplicates
+function removeDuplicates(array) {
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (!newArray[array[i]]) newArray[array[i]] = array[i];
+  }
+  return Object.values(newArray);
+}
+console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]))
