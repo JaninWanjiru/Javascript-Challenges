@@ -164,3 +164,17 @@ function linearSearch(array, value) {
 }
 console.log(linearSearch([5, 3, 7, 1, 4], 7));
 console.log(linearSearch([5, 3, 7, 1, 4], 10));
+
+
+// Challenge 12: Reverse Linear Search
+function reverseLinearSearch(array, value){
+  let lastOccurrence = -1;
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === value){
+      lastOccurrence = i; // this will keep updating the value until we come across the last value
+    }
+  }
+  return lastOccurrence;
+}
+console.log(reverseLinearSearch([5, 3, 7, 1, 4, 7], 7))
+console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10))
