@@ -123,7 +123,7 @@ console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6]));
 // Challenge 9: Count Truthy
 function countTruthy(object) {
   let count = 0;
-  let properties = Object.properties(object);
+  let properties = Object.values(object);
   for (let i = 0; i < properties.length; i++){
     if(properties[i] == "null" || properties[i] == "0" || properties[i] == "false" || properties[i] == ""){
       continue
@@ -137,4 +137,17 @@ console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }))
 
 
 // Challenge 10: Average of Numbers
-
+function average(array) {
+  let sum = 0, items = array.length;
+    if(items === 0) {
+        return 0;
+    } else {
+        for(let i = 0; i < items; i++) {
+            sum += array[i];
+        }
+    }
+    
+    return sum / items;
+}
+console.log(average([2, 4, 6, 8]));
+console.log(average([]));
