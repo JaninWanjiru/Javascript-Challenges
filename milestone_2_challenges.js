@@ -192,3 +192,20 @@ function linearSearchAll(array, value) {
 }
 console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7))
 console.log(linearSearchAll([5, 3, 7, 1, 4], 10))
+
+
+// Challenge 14: Count Occurrences
+function countOccurences(strings) {
+  let object = {};
+    for(let i = 0; i < strings.length; i++) {
+        let item  = strings[i];
+
+        if(object[item] === undefined) {
+            object[item] = 1;
+        } else {
+            object[item] += 1;
+        }
+    }
+    return object;
+}
+console.log(countOccurences(["apple", "banana", "apple", "orange", "banana", "apple"]))
