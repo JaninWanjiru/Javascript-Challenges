@@ -178,3 +178,17 @@ function reverseLinearSearch(array, value){
 }
 console.log(reverseLinearSearch([5, 3, 7, 1, 4, 7], 7))
 console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10))
+
+
+// Challenge 13: Linear Search All Indices
+function linearSearchAll(array, value) {
+  let valueAppearance = [];
+  for (let i = 0; i < array.length; i++){
+    if (array[i] == value){
+      valueAppearance.push(i);
+    }
+  }
+  return valueAppearance;
+}
+console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7))
+console.log(linearSearchAll([5, 3, 7, 1, 4], 10))
