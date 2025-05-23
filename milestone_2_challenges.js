@@ -118,3 +118,23 @@ function differenceEvenOdd(numbers) {
 }
 
 console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6]));
+
+
+// Challenge 9: Count Truthy
+function countTruthy(object) {
+  let count = 0;
+  let properties = Object.properties(object);
+  for (let i = 0; i < properties.length; i++){
+    if(properties[i] == "null" || properties[i] == "0" || properties[i] == "false" || properties[i] == ""){
+      continue
+    } else {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }))
+
+
+// Challenge 10: Average of Numbers
+
