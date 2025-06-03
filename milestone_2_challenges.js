@@ -22,7 +22,7 @@ function findMax(arr) {
   }
   return maxNo
 }
-console.log(findMax([2, 10, 15, 9, 3])); //15
+console.log(findMax([2, 10, 15, 9, 3])); 
 
 
 // Challenge 3: Election Winner
