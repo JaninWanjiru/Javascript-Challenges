@@ -1,56 +1,57 @@
 // Challenge 1: Sum of Positives
-function sumOfPositives(numbers) {
+function sumOfPositives(arr) {
   let sum = 0;
-  for (let num of numbers) {
-    if (num > 0) {
-      sum += num;
+  for(let i=0; i<arr.length; i++ ) {
+    if (arr[i] > 0) {
+      sum = sum + arr[i];
     }
   }
-  return sum;
+  return sum
 }
 console.log(sumOfPositives([1, -4, 7, 12])); 
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8]));   
 
 
-// Challenge 2: Find Maximum Value
-function findMax(array) {
-    let max = array[0];
-  for (let i = 1; i < array.length; i++) {
-    if (array[i] > max) {
-      max = array[i];
+// Challenge 2: Find Max Value
+function findMax(arr) {
+  let maxNo = 0;
+  for(let i=0; i<arr.length; i++) {
+    if(arr[i] > maxNo) {
+      maxNo=arr[i];
     }
   }
-  return max;
+  return maxNo
 }
-console.log(findMax([2, 10, 15, 9, 3]));
+console.log(findMax([2, 10, 15, 9, 3])); //15
 
 
 // Challenge 3: Election Winner
-function findWinner(candidates) {
-    let winner = candidates[0];
-    for(let i=0; i < candidates.length; i++) {
-        if(candidates[i].votes > winner.votes) {
-            winner = candidates[i];
-        }
+function findWinner(arr) {
+  let highVote = 0;
+  let winner;
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i].votes > highVote){
+      winner = arr[i];
+      highVote = arr[i].votes;
     }
-    return winner;
+  }
+  return winner;
 }
-
 const candidates = [
-  { name: "Christy", votes: 50 },
-  { name: "Benard", votes: 66 },
-  { name: "Calvin", votes: 85 }
+  { name: "Alice", votes: 50 },
+  { name: "Bob", votes: 75 },
+  { name: "Charlie", votes: 65 }
 ];
 
 console.log(findWinner(candidates)); 
 
 
 // Challenge 4: Longest Word
-function findLongestWord(strings) {
-  let longest = strings[0];
-  for(let i = 0; i < strings.length; i++) {
-    if (strings[i].length > longest.length) {
-      longest = strings[i]; 
+function findLongestWord(arr) {
+  let longest = arr[0];
+  for(let i = 0; i < arr.length; i++) {
+    if (arr[i].length > longest.length) {
+      longest = arr[i]; 
     }
   }
   return longest;
@@ -72,20 +73,17 @@ console.log(countProperties(objectExample));
 
 
 // Challenge 6:Filter by Length
-function filterByLength(strings, minLength) {
+function filterByLength(arr, minLength) {
   const newArray = [];
 
-  for (let i = 0; i < strings.length; i++) {
-    if (strings[i].length >= minLength) {
-      newArray.push(strings[i]);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length >= minLength) {
+      newArray.push(arr[i]);
     }
   }
   return newArray;
 }
-const string = ["tree", "house", "cat", "mountain", "sun"];
-
-console.log(filterByLength(string, 4));
-
+console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5));
 
 // Challenge 7: Sum of Even Numbers
 function sumEvenNumbers(myArray) {
@@ -97,26 +95,23 @@ function sumEvenNumbers(myArray) {
   }
   return sumOfValues;
 }
-
 console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6]));
 
 
 // Challenge 8: Difference Between Sum of Even and Odd Numbers
-function differenceEvenOdd(numbers) {
-  let evenSum = 0;
-  let oddSum = 0;
+function differenceEvenOdd(arr){
+  let evenSum=0
+  let oddSum=0
 
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2 === 0) {
-      evenSum += numbers[i];
+  for(let i=0; i<arr.length; i++) {
+    if(arr[i] % 2===0){
+      evenSum = evenSum+arr[i];
     } else {
-      oddSum += numbers[i];
+      oddSum = oddSum +arr[i];
     }
   }
-
-  return evenSum - oddSum;
+  return evenSum-oddSum;
 }
-
 console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6]));
 
 
@@ -138,16 +133,17 @@ console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }))
 
 // Challenge 10: Average of Numbers
 function average(array) {
-  let sum = 0, items = array.length;
-    if(items === 0) {
+  let sum = 0
+  let numberOfItems = array.length;
+    if(numberOfItems === 0) {
         return 0;
     } else {
-        for(let i = 0; i < items; i++) {
+        for(let i = 0; i < numberOfItems; i++) {
             sum += array[i];
         }
     }
     
-    return sum / items;
+    return sum / numberOfItems;
 }
 console.log(average([2, 4, 6, 8]));
 console.log(average([]));
@@ -155,14 +151,18 @@ console.log(average([]));
 
 // Challenge 11: Linear Search
 function linearSearch(array, value) {
+let result = 0
     for(let i = 0; i < array.length; i++) {
         if(array[i] === value) {
-            return i;
+            result=i;
+            return result;
+        } else {
+          result = -1;
         }
     }
-    return -1;
+    return result
 }
-console.log(linearSearch([5, 3, 7, 1, 4], 7));
+console.log(linearSearch([5, 3, 7, 1, 4], 7)); 
 console.log(linearSearch([5, 3, 7, 1, 4], 10));
 
 
@@ -171,7 +171,7 @@ function reverseLinearSearch(array, value){
   let lastOccurrence = -1;
   for (let i = 0; i < array.length; i++){
     if (array[i] === value){
-      lastOccurrence = i; // this will keep updating the value until we come across the last value
+      lastOccurrence = i; 
     }
   }
   return lastOccurrence;
@@ -195,29 +195,28 @@ console.log(linearSearchAll([5, 3, 7, 1, 4], 10))
 
 
 // Challenge 14: Count Occurrences
-function countOccurences(strings) {
+function countOccurences(arr) {
   let object = {};
-    for(let i = 0; i < strings.length; i++) {
-        let item  = strings[i];
-
-        if(object[item] === undefined) {
-            object[item] = 1;
-        } else {
+    for(let i = 0; i < arr.length; i++) {
+        let item  = arr[i];
+        if(object[item]) { //object[arr[i]] - checks if the value is a key in the object 
             object[item] += 1;
+        } else {
+            object[item] = 1;
         }
     }
     return object;
 }
+
 console.log(countOccurences(["apple", "banana", "apple", "orange", "banana", "apple"]))
 
 
 // Challenge 15: Remove Duplicates
 function removeDuplicates(array) {
   let newArray = [];
-  for (let i = 0; i < array.length; i++) {
-    if (!newArray[array[i]]) newArray[array[i]] = array[i];
-  }
-  return Object.values(newArray);
+  newArray = new Set(array);
+  noDuplicates = Array.from(newArray);
+  return noDuplicates  
 }
 console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]))
 
@@ -229,15 +228,17 @@ function mostFrequent(array) {
     let mostAppearance;
 
     for (let i = 0; i < array.length; i++) {
-        if (occurrences[array[i]]) {
-            occurrences[array[i]]++;
+      let item = array[i]
+
+        if (occurrences[item]) {
+            occurrences[item] += 1;
         } else {
-            occurrences[array[i]] = 1;
+            occurrences[item] = 1;
         }
 
-        if (occurrences[array[i]] > count) {
-            count = occurrences[array[i]];
-            mostAppearance = array[i];
+        if (occurrences[item] > count) {
+            count = occurrences[item];
+            mostAppearance = item;
         }
     }
     return mostAppearance;
